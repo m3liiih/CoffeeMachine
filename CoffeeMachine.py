@@ -13,7 +13,7 @@ def ingredients_per(cups):
       milk_ml = cups * 50
       beans_g = cups * 20
 
-      print(f"For {cups} cups of coffee you will need:")
+      print(f"For {cups} cups of coffee you need:")
       print(f"{water_ml} ml of water")
       print(f"{milk_ml} ml of milk")
       print(f"{beans_g} g of coffee beans")
