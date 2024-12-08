@@ -37,7 +37,8 @@ def machine_stock(water, milk, beans, cups, money):
       print(f"{cups} coffee cups")
       print(f"${money} of money")
 
-def buy_coffe(water, milk, beans, cups, money):
+
+def buy_coffee(water, milk, beans, cups, money):
       print("What type of coffee would you like to buy?\n1 - espresso, 2 - latte, 3 - cappuccino, 0 - back")
       coffee_type = input("-- ")
 
