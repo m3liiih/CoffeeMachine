@@ -7,10 +7,10 @@ make_coffee()
 print()
 
 
-def ingredients_for(cups):
-      water_ml = cups * 200
-      milk_ml = cups * 50
-      beans_g = cups * 10
+def ingredients_for(water, milk, beans, cups2make):
+      water_ml = cups2make * 200
+      milk_ml = cups2make * 50
+      beans_g = cups2make * 10
 
       print(f"For {cups} cups of coffee you need:")
       print(f"{water_ml} ml of water")
