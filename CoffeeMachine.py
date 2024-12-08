@@ -7,6 +7,7 @@ def make_coffee():
           "Adding some milk into the cup...\n"
           "Coffee is ready!")
 make_coffee()
+print()
 
 def ingredients_per(cups):
       water_ml = cups * 200
