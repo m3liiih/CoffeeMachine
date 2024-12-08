@@ -21,10 +21,6 @@ def ingredients_per(cups):
 
 
 def resources(water_available, milk_available, beans_available, cups_needed):
-      water_needed = cups_needed * 200
-      milk_needed = cups_needed * 50
-      beans_needed = cups_needed * 10
-
       water_limited_cups = water_available // 200
       milk_limited_cups = milk_available // 50
       bean_limited_cups = beans_available // 10
