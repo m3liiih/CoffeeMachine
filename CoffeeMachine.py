@@ -19,8 +19,6 @@ def ingredients_per(cups):
       print(f"{milk_ml} ml of milk")
       print(f"{beans_g} g of coffee beans")
 
-cups = int(input("How many cups of coffee will you need: "))
-ingredients_per(cups)
 
 def resources(water_available, milk_available, beans_available, cups_needed):
       water_needed = cups_needed * 200
