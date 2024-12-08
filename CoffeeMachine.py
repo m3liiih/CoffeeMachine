@@ -74,11 +74,11 @@ def buy_coffee(water, milk, beans, cups, money, count):
             beans_needed = 10 * count
             price = 7.5 * count
       else:
-            print("Please select a valid option.")
+            print("Please select a valid option.\n")
             return water, milk, beans, cups, money
 
       if water >= water_needed and milk >= milk_needed and beans >= beans_needed and cups >= 1:
-          print("Making your coffee... Enjoy!")
+          print("Making your coffee... Enjoy!\n")
           return water - water_needed, milk - milk_needed, beans - beans_needed, cups - 1, money + price
       else:
             print("Sorry, not enough resources.")
@@ -95,11 +95,10 @@ def add_resources(water, milk, beans, cups):
 
 def collect_money(money):
       if input("Please use the key to collect money: ") == "key" :
-            print(f"Collected ${money}")
+            print(f"Collected ${money}\n")
             money = 0
       else:
-            print("Wrong key.")
-      print()
+            print("Wrong key.\n")
       return money
 
 
@@ -109,13 +108,13 @@ while True:
       if action == "buy":
             mode = int(input("Select mode 1 - single, 2 - multiple, 0 - back: "))
             if mode == 1:
-                  buy_coffee(water, milk, beans, cups, money, 1)
+                  water, milk, beans, cups, money = buy_coffee(water, milk, beans, cups, money, 1)
             elif mode == 2:
                   count = int(input("How many cups would you like? "))
                   max = max_cups(water, milk, beans, count)
                   if count <= max:
-                        buy_coffee(water, milk, beans, cups, money, count)
-                        print(f"Here's your {count} cups of coffee, enjoy your meeting.")
+                        water, milk, beans, cups, money = buy_coffee(water, milk, beans, cups, money, count)
+                        print(f"Here's your {count} cups of coffee, enjoy your meeting.\n")
             elif mode == 0:
                   print()
             else:
@@ -133,14 +132,12 @@ while True:
             if m_mode == 1:
                   machine_stock(water, milk, beans, cups, money)
             elif m_mode == 2:
-                  add_resources(water, milk, beans, cups)
+                  water, milk, beans, cups = add_resources(water, milk, beans, cups)
             elif m_mode == 3:
-                  collect_money(money)
+                  money = collect_money(money)
             elif m_mode == 0:
                   print()
             else:
                   print("Invalid maintenance mode")
       else:
             print("Invalid action")
-
-
