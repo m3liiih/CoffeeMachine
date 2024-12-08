@@ -69,6 +69,7 @@ def buy_coffe(water, milk, beans, cups, money):
       else:
             print("Sorry, not enough resources.")
 
+
 def add_resources(water, milk, beans, cups):
       water = water + int(input("How many ml of water do you want to add: "))
       milk = milk + int(input("How many ml of milk do you want to add: "))
