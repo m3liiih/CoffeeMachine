@@ -6,7 +6,7 @@ def make_coffee():
 make_coffee()
 print()
 
-def ingredients_per(cups):
+def ingredients_for(cups):
       water_ml = cups * 200
       milk_ml = cups * 50
       beans_g = cups * 10
