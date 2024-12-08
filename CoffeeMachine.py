@@ -6,6 +6,11 @@ def make_coffee():
 make_coffee()
 print()
 
+water = 4000
+milk = 1200
+beans = 250
+cups = 30
+money = 0
 
 def ingredients_for(water, milk, beans, cups2make):
       water_ml = cups2make * 200
