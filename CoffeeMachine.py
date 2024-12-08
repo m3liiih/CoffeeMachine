@@ -29,6 +29,7 @@ def resources(water_available, milk_available, beans_available, cups_needed):
       else:
             print(f"I can't make that much but I can make {max_cups_of_coffee} cups.")
 
+
 def machine_stock(water, milk, beans, cups, money):
       print("The coffee machine has:")
       print(f"{water} ml of water")
