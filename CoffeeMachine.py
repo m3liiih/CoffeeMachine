@@ -75,3 +75,11 @@ def add_resources(water, milk, beans, cups):
       beans = beans + int(input("How many g of coffee beans do you want to add: "))
       cups = cups + int(input("How many coffee cups do you want to add: "))
       return water, milk, beans, cups
+
+def collect_money(money):
+      if input("Please use the key to collect money: ") == "key" :
+            print(f"Collected ${money}")
+            money = 0
+      else:
+            print("Wrong key.")
+      return money
