@@ -77,10 +77,19 @@ def buy_coffee(water, milk, beans, cups, money, count):
 
 #function to add resources in maintenance mode
 def add_resources(water, milk, beans, cups):
-      water += + int(input("How many ml of water do you want to add: "))
-      milk += int(input("How many ml of milk do you want to add: "))
-      beans += int(input("How many g of coffee beans do you want to add: "))
-      cups += int(input("How many coffee cups do you want to add: "))
+      water += + int(input("How many ml of water do you want to add (max:4000): "))
+      milk += int(input("How many ml of milk do you want to add (max:1200): "))
+      beans += int(input("How many g of coffee beans do you want to add (max:300): "))
+      cups += int(input("How many coffee cups do you want to add (max:24): "))
+      water_max, milk_max, beans_max, cups_max = 4000, 1200, 300, 24
+      if water > water_max:
+            water = water_max
+      if milk > milk_max:
+            milk = milk_max
+      if beans > beans_max:
+            beans = beans_max
+      if cups > cups_max:
+            cups = cups_max
       machine_stock(water, milk, beans, cups, money)
       return water, milk, beans, cups
 
