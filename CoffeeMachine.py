@@ -12,19 +12,6 @@ cups = 30
 money = 0
 
 
-def ingredients_for(water, milk, beans, cups, money, cups2make):
-      water_ml = cups2make * 200
-      milk_ml = cups2make * 50
-      beans_g = cups2make * 10
-
-      print(f"For {cups} cups of coffee you need:")
-      print(f"{water_ml} ml of water")
-      print(f"at most {milk_ml} ml of milk")
-      print(f"{beans_g} g of coffee beans")
-
-      machine_stock(water, milk, beans, cups, money)
-
-
 def max_cups(water_available, milk_available, beans_available, cups_needed):
       water_limited_cups = water_available // 200
       milk_limited_cups = milk_available // 50
