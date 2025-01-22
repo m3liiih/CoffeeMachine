@@ -116,7 +116,6 @@ while True:
                   print()
 
 
-
       elif action == "menu":
             print("Espresso $3\nLatte $5\nCappuccino $7.5\n")
 
