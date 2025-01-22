@@ -22,7 +22,7 @@ def max_cups(water_available, milk_available, beans_available, cups_needed):
       max_cups_of_coffee = min(water_limited_cups, milk_limited_cups, bean_limited_cups)
 
       if max_cups_of_coffee >= cups_needed:
-            print("I can make that much coffee for your meeting.")
+            print("I can make that much coffee for you.")
       else:
             print(f"I can't make that much but I can make {max_cups_of_coffee} cups.")
       print()
@@ -106,7 +106,7 @@ while True:
                   max = max_cups(water, milk, beans, count)
                   if count <= max:
                         water, milk, beans, cups, money = buy_coffee(water, milk, beans, cups, money, count)
-                        print(f"Here's your {count} cups of coffee, enjoy your meeting.\n")
+                        print(f"Here's your {count} cups of coffee, enjoy.\n")
             elif mode == 0:
                   print()
             else:
