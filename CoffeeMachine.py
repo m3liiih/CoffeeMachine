@@ -2,9 +2,8 @@ def make_coffee():
     print("Starting to make coffee...\n"
           "Grinding coffee beans...\n"
           "Boiling water...\n"
-          "Coffee is ready to mix!")
+          "Coffee is ready to mix!\n")
 make_coffee()
-print()
 
 water = 4000
 milk = 1200
