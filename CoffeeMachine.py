@@ -104,6 +104,7 @@ while True:
                   #multiple mode calls buy coffee function with adjustable coffee count
                   count = int(input("How many cups would you like? "))
                   max = max_cups(water, milk, beans, count)
+                  #checks if making that much coffee is possible
                   if count <= max:
                         water, milk, beans, cups, money = buy_coffee(water, milk, beans, cups, money, count)
                         print(f"Here's your {count} cups of coffee, enjoy.\n")
