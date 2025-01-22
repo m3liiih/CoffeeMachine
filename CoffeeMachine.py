@@ -107,7 +107,6 @@ while True:
                   #checks if making that much coffee is possible
                   if count <= max:
                         water, milk, beans, cups, money = buy_coffee(water, milk, beans, cups, money, count)
-                        print(f"Here's your {count} cups of coffee, enjoy.\n")
             elif mode == 0:
                   print()
             else:
