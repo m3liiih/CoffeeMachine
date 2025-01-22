@@ -1,3 +1,4 @@
+#default text function to notify the machine is running
 def make_coffee():
     print("Starting to make coffee...\n"
           "Grinding coffee beans...\n"
@@ -5,13 +6,14 @@ def make_coffee():
           "Coffee is ready to mix!\n")
 make_coffee()
 
-water = 4000
-milk = 1200
-beans = 250
+#default resource values which are enough for:
+water = 4000 #20 cups
+milk = 1200 #24 cups min
+beans = 250 #25 cups
 cups = 30
 money = 0
 
-
+#function to calculate max number of cups possible with available resources
 def max_cups(water_available, milk_available, beans_available, cups_needed):
       water_limited_cups = water_available // 200
       milk_limited_cups = milk_available // 50
@@ -26,7 +28,7 @@ def max_cups(water_available, milk_available, beans_available, cups_needed):
       print()
       return max_cups_of_coffee
 
-
+#function to show suppy stock
 def machine_stock(water, milk, beans, cups, money):
       print("The coffee machine currently has:")
       print(f"{water} ml of water")
@@ -36,7 +38,7 @@ def machine_stock(water, milk, beans, cups, money):
       print(f"${money} of money")
       print()
 
-
+#function to choose type of coffee to buy
 def buy_coffee(water, milk, beans, cups, money, count):
       print("What type of coffee would you like to buy?\n1 - espresso, 2 - latte, 3 - cappuccino, 0 - back")
       coffee_type = input("-- ")
@@ -63,6 +65,7 @@ def buy_coffee(water, milk, beans, cups, money, count):
             print("Please select a valid option.\n")
             return water, milk, beans, cups, money
 
+      #if statement to check if all resources are available
       if water >= water_needed and milk >= milk_needed and beans >= beans_needed and cups >= 1:
           print("Making your coffee... Enjoy!\n")
           return water - water_needed, milk - milk_needed, beans - beans_needed, cups - 1, money + price
@@ -70,7 +73,7 @@ def buy_coffee(water, milk, beans, cups, money, count):
             print("Sorry, not enough resources.")
       print()
 
-
+#function to add resources in maintenance mode
 def add_resources(water, milk, beans, cups):
       water += + int(input("How many ml of water do you want to add: "))
       milk += int(input("How many ml of milk do you want to add: "))
@@ -79,6 +82,7 @@ def add_resources(water, milk, beans, cups):
       machine_stock(water, milk, beans, cups, money)
       return water, milk, beans, cups
 
+#function to collect money from coffee sold
 def collect_money(money):
       if input("Please use the key to collect money: ") == "key" :
             print(f"Collected ${money}\n")
@@ -94,8 +98,10 @@ while True:
       if action == "buy":
             mode = int(input("Select mode 1 - single, 2 - multiple, 0 - back: "))
             if mode == 1:
+                  #single mode calls buy_coffee function with default count of 1
                   water, milk, beans, cups, money = buy_coffee(water, milk, beans, cups, money, 1)
             elif mode == 2:
+                  #multiple mode calls buy coffee function with adjustable coffee count
                   count = int(input("How many cups would you like? "))
                   max = max_cups(water, milk, beans, count)
                   if count <= max:
