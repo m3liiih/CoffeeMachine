@@ -7,10 +7,10 @@ def make_coffee():
 make_coffee()
 
 #default resource values which are enough for:
-water = 4000 #20 cups
-milk = 1200 #24 cups min
-beans = 250 #25 cups
-cups = 30
+water = 2400 #12 cups (max: 4000ml - 20 cups)
+milk = 800 #16 cups min (max: 1200ml - 24 cups)
+beans = 250 #25 cups (max: 300g - 30 cups)
+cups = 20 #max: 24 cups
 money = 0
 
 #function to calculate max number of cups possible with available resources
