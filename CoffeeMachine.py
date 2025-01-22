@@ -68,6 +68,8 @@ def buy_coffee(water, milk, beans, cups, money, count):
       #if statement to check if all resources are available
       if water >= water_needed and milk >= milk_needed and beans >= beans_needed and cups >= 1:
           print("Making your coffee... Enjoy!\n")
+          if count > 1:
+                print(f"Here's your {count} cups of coffee, enjoy.\n")
           return water - water_needed, milk - milk_needed, beans - beans_needed, cups - 1, money + price
       else:
             print("Sorry, not enough resources.")
