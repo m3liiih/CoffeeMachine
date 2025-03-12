@@ -51,19 +51,16 @@ def buy_coffee(water, milk, beans, cups, money, count):
             milk_needed = 0 * count
             beans_needed = 10 * count
             price = 3 * count
-            cups_needed = count
       elif coffee_type == "2":
             water_needed = 200 * count
             milk_needed = 25 * count
             beans_needed = 10 * count
             price = 5 * count
-            cups_needed = count
       elif coffee_type == "3":
             water_needed = 200 * count
             milk_needed = 50 * count
             beans_needed = 10 * count
             price = 7.5 * count
-            cups_needed = count
       else:
             print("Please select a valid option.\n")
             return water, milk, beans, cups, money
