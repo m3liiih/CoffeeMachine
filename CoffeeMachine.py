@@ -133,14 +133,14 @@ while True:
 
 
       elif action == "maintenance":
-            m_mode = int(input("Select mode 1 - stock, 2 - refill, 3 - collect, 0 - back: "))
-            if m_mode == 1:
+            m_mode = input("Select mode 1 - stock, 2 - refill, 3 - collect, 0 - back: ")
+            if m_mode == "1":
                   machine_stock(water, milk, beans, cups, money)
-            elif m_mode == 2:
+            elif m_mode == "2":
                   water, milk, beans, cups = add_resources(water, milk, beans, cups)
-            elif m_mode == 3:
+            elif m_mode == "3":
                   money = collect_money(money)
-            elif m_mode == 0:
+            elif m_mode == "0":
                   print()
             else:
                   print("Invalid maintenance mode")
