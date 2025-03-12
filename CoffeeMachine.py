@@ -35,8 +35,7 @@ def machine_stock(water, milk, beans, cups, money):
       print(f"{milk} ml of milk")
       print(f"{beans} g of coffee beans")
       print(f"{cups} coffee cups")
-      print(f"${money} of money")
-      print()
+      print(f"${money} of money\n")
 
 #function to choose type of coffee to buy
 def buy_coffee(water, milk, beans, cups, money, count):
@@ -70,7 +69,7 @@ def buy_coffee(water, milk, beans, cups, money, count):
           print("Making your coffee... Enjoy!\n")
           if count > 1:
                 print(f"Here's your {count} cups of coffee, enjoy.\n")
-          return water - water_needed, milk - milk_needed, beans - beans_needed, cups - cups_needed, money + price
+          return water - water_needed, milk - milk_needed, beans - beans_needed, cups - count, money + price
       else:
             print("Sorry, not enough resources.")
       print()
@@ -90,6 +89,7 @@ def add_resources(water, milk, beans, cups):
             beans = beans_max
       if cups > cups_max:
             cups = cups_max
+      print()
       machine_stock(water, milk, beans, cups, money)
       return water, milk, beans, cups
 
@@ -121,8 +121,7 @@ while True:
             elif mode == 0:
                   print()
             else:
-                  print("Invalid mode selection")
-                  print()
+                  print("Invalid mode selection\n")
 
 
       elif action == "menu":
