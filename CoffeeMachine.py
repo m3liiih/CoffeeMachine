@@ -43,7 +43,7 @@ def buy_coffee(water, milk, beans, cups, money, count):
       print("What type of coffee would you like to buy?\n1 - espresso, 2 - latte, 3 - cappuccino, 0 - back")
       coffee_type = input("-- ")
 
-      if coffee_type == 0:
+      if coffee_type == "0":
             return water, milk, beans, cups, money
 
       if coffee_type == "1":
