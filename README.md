@@ -1,10 +1,15 @@
-# CoffeeMachine
+# Coffee Machine
 
-A coffee machine with options to buy single or multiple cups for meetings! 
-(type selection for multiple cups coming soon, now everyone in the meeting has to have the same type, don't ask me why)
+Simulates a coffee machine that tracks resources and sales.
 
-The machine calculates and keeps track of resources like water, milk, coffee beans, cups and money!
-(you can't make coffee from thin air which was recently fixed)
+## Features
 
-Maintenance options to check stock, fill previosly mentioned resources and collect money!
-(added a cap to refill resources so you can't fill the machine with infinite resources to have all the coffee you want which was previously possible)
+* **Modes:** `buy`, `menu`, or `maintenance`.
+* **Buy Coffee:** Options to buy single or multiple cups at once.
+* **Maintenance Modes:** Options to check stock, refill, collect money.
+* **Resource Tracking:** The machine keeps track of resources like water, milk, coffee beans, cups and money.
+
+## Previous Fixes
+
+* Resource management issues fixed. Making coffee out of thin air is no longer possible.
+* Resource tanks no longer work on magic. Refills are now capped to prevent infinite resources.
