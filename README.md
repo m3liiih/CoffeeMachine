@@ -11,5 +11,7 @@ Simulates a coffee machine that tracks resources and sales.
 
 ## Previous Fixes
 
-* Resource management issues fixed. Making coffee out of thin air is no longer possible.
-* Resource tanks no longer work on magic. Refills are now capped to prevent infinite resources.
+* **Resource management issues fixed.**
+<br>*Making coffee out of thin air is no longer possible.*
+* **Refills are now capped to prevent infinite resources.**
+<br>*Resource tanks no longer work on magic and responsible witches were hunted by the townsfolk.*
