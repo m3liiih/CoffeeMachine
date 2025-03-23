@@ -91,3 +91,47 @@ cf_machine = CoffeeMachine()
 cf_machine.make_coffee()
 
 while True:
+    action = input("Select an action (buy, menu, maintenance): ")
+
+    if action == "buy":
+        mode = int(input("Select mode 1 - single, 2 - multiple, 0 - back: "))
+        if mode == 1:
+            print("What type of coffee would you like to buy?\n1 - espresso, 2 - latte, 3 - cappuccino, 0 - back")
+            coffee_type = input("-- ")
+            if coffee_type == "1":
+                cf_machine.buy_coffee(espresso, 1)
+            elif coffee_type == "2":
+                cf_machine.buy_coffee(latte, 1)
+            elif coffee_type == "3":
+                cf_machine.buy_coffee(cappuccino, 1)
+            elif coffee_type == "0":
+                print()
+            else:
+                print("Please select a valid option.\n")
+        elif mode == 2:
+            count = int(input("How many cups would you like? "))
+            max_cups = cf_machine.max_cups(count)
+            if count <= max_cups:
+                print("What type of coffee would you like to buy?\n1 - espresso, 2 - latte, 3 - cappuccino, 0 - back")
+                coffee_type = input("-- ")
+                if coffee_type == "1":
+                    cf_machine.buy_coffee(espresso, count)
+                elif coffee_type == "2":
+                    cf_machine.buy_coffee(latte, count)
+                elif coffee_type == "3":
+                    cf_machine.buy_coffee(cappuccino, count)
+                elif coffee_type == "0":
+                    print()
+                else:
+                    print("Please select a valid option.\n")
+
+        elif mode == 0:
+            print()
+        else:
+            print("Invalid mode selection\n")
+
+    elif action == "menu":
+        print(espresso.menu())
+        print(latte.menu())
+        print(cappuccino.menu())
+        print()
