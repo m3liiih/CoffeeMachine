@@ -139,6 +139,6 @@ while True:
             elif m_mode == "0":
                   print()
             else:
-                  print("Invalid maintenance mode")
+                  print("Invalid maintenance mode\n")
       else:
-            print("Invalid action")
+            print("Invalid action\n")
