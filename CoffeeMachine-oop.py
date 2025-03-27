@@ -135,3 +135,18 @@ while True:
         print(latte.menu())
         print(cappuccino.menu())
         print()
+
+    elif action == ("maintenance"):
+        m_mode = input("Select mode 1 - stock, 2 - refill, 3 - collect, 0 - back: ")
+        if m_mode == "1":
+            cf_machine.show_stock()
+        elif m_mode == "2":
+            cf_machine.add_resources()
+        elif m_mode == "3":
+            cf_machine.collect_money()
+        elif m_mode == "0":
+            print()
+        else:
+            print("Invalid maintenance mode\n")
+    else:
+        print("Invalid action\n")
