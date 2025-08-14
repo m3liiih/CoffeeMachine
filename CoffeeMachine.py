@@ -7,11 +7,11 @@ def make_coffee():
 make_coffee()
 
 #default resource values which are enough for:
-water = 2400 #12 cups (max: 4000ml - 20 cups)
-milk = 800 #16 cups min (max: 1200ml - 24 cups)
-beans = 250 #25 cups (max: 300g - 30 cups)
-cups = 20 #max: 24 cups
-money = 0
+water_g = 2400 #12 cups (max: 4000ml - 20 cups)
+milk_g = 800 #16 cups min (max: 1200ml - 24 cups)
+beans_g = 250 #25 cups (max: 300g - 30 cups)
+cups_g = 20 #max: 24 cups
+money_g = 0
 
 #function to calculate max number of cups possible with available resources
 def max_cups(water_available, milk_available, beans_available, cups_needed):
@@ -21,11 +21,8 @@ def max_cups(water_available, milk_available, beans_available, cups_needed):
 
       max_cups_of_coffee = min(water_limited_cups, milk_limited_cups, bean_limited_cups)
 
-      if max_cups_of_coffee >= cups_needed:
-            print("I can make that much coffee for you.")
-      else:
-            print(f"I can't make that much but I can make {max_cups_of_coffee} cups.")
-      print()
+      if max_cups_of_coffee < cups_needed:
+            print(f"Not enough resources. Max: {max_cups_of_coffee} cup(s) possible.\n")
       return max_cups_of_coffee
 
 #function to show suppy stock
@@ -90,7 +87,7 @@ def add_resources(water, milk, beans, cups):
       if cups > cups_max:
             cups = cups_max
       print()
-      machine_stock(water, milk, beans, cups, money)
+      machine_stock(water, milk, beans, cups, money_g)
       return water, milk, beans, cups
 
 #function to collect money from coffee sold
@@ -110,14 +107,14 @@ while True:
             mode = int(input("Select mode 1 - single, 2 - multiple, 0 - back: "))
             if mode == 1:
                   #single mode calls buy_coffee function with default count of 1
-                  water, milk, beans, cups, money = buy_coffee(water, milk, beans, cups, money, 1)
+                  water_g, milk_g, beans_g, cups_g, money_g = buy_coffee(water_g, milk_g, beans_g, cups_g, money_g, 1)
             elif mode == 2:
                   #multiple mode calls buy coffee function with adjustable coffee count
-                  count = int(input("How many cups would you like? "))
-                  max = max_cups(water, milk, beans, count)
+                  ct = int(input("How many cups would you like? "))
+                  max_cup = max_cups(water_g, milk_g, beans_g, ct)
                   #checks if making that much coffee is possible
-                  if count <= max:
-                        water, milk, beans, cups, money = buy_coffee(water, milk, beans, cups, money, count)
+                  if ct <= max_cup:
+                        water_g, milk_g, beans_g, cups_g, money_g = buy_coffee(water_g, milk_g, beans_g, cups_g, money_g, ct)
             elif mode == 0:
                   print()
             else:
@@ -131,11 +128,11 @@ while True:
       elif action == "maintenance":
             m_mode = input("Select mode 1 - stock, 2 - refill, 3 - collect, 0 - back: ")
             if m_mode == "1":
-                  machine_stock(water, milk, beans, cups, money)
+                  machine_stock(water_g, milk_g, beans_g, cups_g, money_g)
             elif m_mode == "2":
-                  water, milk, beans, cups = add_resources(water, milk, beans, cups)
+                  water_g, milk_g, beans_g, cups_g = add_resources(water_g, milk_g, beans_g, cups_g)
             elif m_mode == "3":
-                  money = collect_money(money)
+                  money_g = collect_money(money_g)
             elif m_mode == "0":
                   print()
             else:
